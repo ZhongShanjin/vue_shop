@@ -1,7 +1,9 @@
 //createRouter创建路由实例对象，createWebHashHistory指定路由工作模式
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Login from './components/login.vue'
-import Home from './components/home.vue'
+import Login from './components/Login.vue'
+import Home from './components/Home.vue'
+import Welcome from './components/Welcome.vue'
+import Users from './components/user/Users.vue'
 //创建路由实例对象
 const router = createRouter({
   //history指定路由工作模式
@@ -10,7 +12,15 @@ const router = createRouter({
   routes: [
     { path: '/', redirect: '/login' },
     { path: '/login', component: Login },
-    { path: '/home', component: Home },
+    {
+      path: '/home',
+      component: Home,
+      redirect: '/welcome',
+      children: [
+        { path: '/welcome', component: Welcome },
+        { path: '/users', component: Users },
+      ],
+    },
   ],
 })
 

@@ -1,10 +1,33 @@
 // 导入element
 import 'element-plus/dist/index.css'
-import { ElMessage } from 'element-plus'
-import { ElButton } from 'element-plus'
-import { ElForm } from 'element-plus'
-import { ElFormItem } from 'element-plus'
-import { ElInput } from 'element-plus'
+import {
+  ElMessage,
+  ElButton,
+  ElForm,
+  ElFormItem,
+  ElInput,
+  ElHeader,
+  ElContainer,
+  ElAside,
+  ElMain,
+  ElMenu,
+  ElSubMenu,
+  ElMenuItem,
+  ElIcon,
+  ElBreadcrumb,
+  ElBreadcrumbItem,
+  ElCard,
+  ElRow,
+  ElCol,
+  ElTable,
+  ElTableColumn,
+  ElSwitch,
+  ElTooltip,
+  ElPagination,
+  ElDialog,
+  ElMessageBox,
+} from 'element-plus'
+
 // 导入element - icon
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 const eleMent = {
@@ -14,6 +37,26 @@ const eleMent = {
   ElForm,
   ElFormItem,
   ElInput,
+  ElHeader,
+  ElContainer,
+  ElAside,
+  ElMain,
+  ElMenu,
+  ElSubMenu,
+  ElMenuItem,
+  ElIcon,
+  ElBreadcrumb,
+  ElBreadcrumbItem,
+  ElCard,
+  ElRow,
+  ElCol,
+  ElTable,
+  ElTableColumn,
+  ElSwitch,
+  ElTooltip,
+  ElPagination,
+  ElDialog,
+  ElMessageBox,
   ElementPlusIconsVue,
 }
 
