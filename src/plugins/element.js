@@ -26,6 +26,10 @@ import {
   ElPagination,
   ElDialog,
   ElMessageBox,
+  ElTag,
+  ElTree,
+  ElSelect,
+  ElOption,
 } from 'element-plus'
 
 // 导入element - icon
@@ -57,6 +61,10 @@ const eleMent = {
   ElPagination,
   ElDialog,
   ElMessageBox,
+  ElTag,
+  ElTree,
+  ElSelect,
+  ElOption,
   ElementPlusIconsVue,
 }
 
