@@ -10,7 +10,6 @@ import './app.css'
 import './assets/css/global.css'
 //axios模块
 import axios from 'axios'
-
 const app = createApp(App)
 
 //路径
@@ -53,10 +52,13 @@ app.use(eleMent.ElTag)
 app.use(eleMent.ElTree)
 app.use(eleMent.ElSelect)
 app.use(eleMent.ElOption)
+app.use(eleMent.ElCascader)
 app.config.globalProperties.$message = eleMent.ElMessage
 app.config.globalProperties.$confirm = eleMent.ElMessageBox
 //添加icon-vue组件
 for (const [key, component] of Object.entries(eleMent.ElementPlusIconsVue)) {
   app.component(key, component)
 }
+// 屏蔽警告信息
+app.config.warnHandler = () => null
 app.mount('#app')

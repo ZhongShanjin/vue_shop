@@ -11,7 +11,7 @@
     <el-card>
       <!-- 添加角色按钮 -->
       <el-row>
-        <el-col>
+        <el-col :span="1">
           <el-button type="primary" @click="addDialogVisible = true"
             >添加角色</el-button
           >

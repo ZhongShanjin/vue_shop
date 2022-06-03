@@ -30,6 +30,7 @@ import {
   ElTree,
   ElSelect,
   ElOption,
+  ElCascader,
 } from 'element-plus'
 
 // 导入element - icon
@@ -65,6 +66,7 @@ const eleMent = {
   ElTree,
   ElSelect,
   ElOption,
+  ElCascader,
   ElementPlusIconsVue,
 }
 
