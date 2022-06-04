@@ -53,6 +53,9 @@ app.use(eleMent.ElTree)
 app.use(eleMent.ElSelect)
 app.use(eleMent.ElOption)
 app.use(eleMent.ElCascader)
+app.use(eleMent.ElAlert)
+app.use(eleMent.ElTabs)
+app.use(eleMent.ElTabPane)
 app.config.globalProperties.$message = eleMent.ElMessage
 app.config.globalProperties.$confirm = eleMent.ElMessageBox
 //添加icon-vue组件

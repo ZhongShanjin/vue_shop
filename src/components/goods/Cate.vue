@@ -94,6 +94,7 @@
           <!-- options用来指定数据源 -->
           <!-- props用来指定配置对象 -->
           <el-cascader
+            ref="addcascaderHandle"
             :options="parentCateList"
             :props="cascaderProps"
             v-model="selectedKeys"
@@ -245,7 +246,7 @@ export default {
     // 选择项发生变化触发这个函数
     parentCateChanged() {
       //如果selecteKeys数组中的length大于0，证明选中的父级分类，反之，就说明没有选中任何父级分类
-      if (this.selectedKeys.length > 0) {
+      if (this.selectedKeys && this.selectedKeys.length > 0) {
         //父级分类的Id
         this.addCateForm.cat_pid =
           this.selectedKeys[this.selectedKeys.length - 1]
@@ -256,6 +257,10 @@ export default {
         this.addCateForm.cat_pid = 0
         //为当前分类的等级赋值
         this.addCateForm.cat_level = 0
+      }
+      //选中后隐藏级联选择框
+      if (this.$refs.addcascaderHandle) {
+        this.$refs.addcascaderHandle.popperVisible = false
       }
     },
     // 点击按钮，添加新的分类
@@ -340,19 +345,4 @@ export default {
 }
 </script>
 
-<style lang="less">
-.el-cascader-panel .el-radio {
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-.el-cascader-panel .el-radio__input {
-  visibility: hidden;
-}
-.el-cascader-panel .el-cascader-node__postfix {
-  top: 10px;
-}
-</style>
+<style lang="less" scoped></style>
