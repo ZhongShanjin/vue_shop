@@ -13,6 +13,7 @@ import axios from 'axios'
 //导入富文本编辑器
 import Quill from 'vue3-quill-editor'
 import 'vue3-quill-editor/lib/style.css'
+import * as echarts from 'echarts'
 
 const app = createApp(App)
 
@@ -68,6 +69,7 @@ app.use(eleMent.ElTimeline)
 app.use(eleMent.ElTimelineItem)
 //挂载富文本编辑器
 app.use(Quill)
+app.use(echarts)
 app.config.globalProperties.$message = eleMent.ElMessage
 app.config.globalProperties.$confirm = eleMent.ElMessageBox
 //添加icon-vue组件
