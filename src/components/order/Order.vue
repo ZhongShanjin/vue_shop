@@ -49,7 +49,7 @@
         v-model:currentPage="queryInfo.pagenum"
         v-model:page-size="queryInfo.pagesize"
         :page-sizes="[5, 10, 15]"
-        :small="small"
+        small="small"
         layout="total, sizes, prev, pager, next, jumper"
         :total="total"
         @size-change="handleSizeChange"

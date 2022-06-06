@@ -13,19 +13,27 @@ import axios from 'axios'
 //导入富文本编辑器
 import Quill from 'vue3-quill-editor'
 import 'vue3-quill-editor/lib/style.css'
-import * as echarts from 'echarts'
+
+//导入NProgress
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
 
 const app = createApp(App)
 
 //路径
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
-//axios请求拦截
+//在request拦截器中，展示进度条NProgress.start()
 axios.interceptors.request.use((config) => {
+  NProgress.start()
   //请求头对象添加token
   config.headers.Authorization = window.sessionStorage.getItem('token')
   return config
 })
-//全局挂载
+//全局挂载，在response拦截器中，展示进度条NProgress.done()
+axios.interceptors.response.use((config) => {
+  NProgress.done()
+  return config
+})
 app.config.globalProperties.$http = axios
 // 挂载路由模块
 app.use(router)
@@ -69,7 +77,6 @@ app.use(eleMent.ElTimeline)
 app.use(eleMent.ElTimelineItem)
 //挂载富文本编辑器
 app.use(Quill)
-app.use(echarts)
 app.config.globalProperties.$message = eleMent.ElMessage
 app.config.globalProperties.$confirm = eleMent.ElMessageBox
 //添加icon-vue组件
@@ -77,5 +84,5 @@ for (const [key, component] of Object.entries(eleMent.ElementPlusIconsVue)) {
   app.component(key, component)
 }
 // 屏蔽警告信息
-app.config.warnHandler = () => null
+// app.config.warnHandler = () => null
 app.mount('#app')

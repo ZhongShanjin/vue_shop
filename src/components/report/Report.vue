@@ -53,7 +53,6 @@ export default {
       },
     }
   },
-  created() {},
   // 此时，页面上的元素，已经被渲染完毕
   async mounted() {
     var myChart = echarts.init(document.getElementById('main'))
@@ -66,8 +65,6 @@ export default {
     //展示数据
     myChart.setOption(result)
   },
-  // 基于准备好的dom，初始化echarts实例
-  methods: {},
 }
 </script>
 <style lang="less" scoped></style>

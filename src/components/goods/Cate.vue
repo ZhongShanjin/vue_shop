@@ -23,12 +23,14 @@
         <el-table-column type="index" label="#" />
         <el-table-column prop="cat_name" label="分类名称" />
         <el-table-column label="是否有效">
-          <el-icon color="lightgreen" v-if="!cat_deleted" size="15px"
-            ><CircleCheckFilled
-          /></el-icon>
-          <el-icon color="red" v-else size="15px"
-            ><CircleCloseFilled
-          /></el-icon>
+          <template #default="{ row }">
+            <el-icon color="lightgreen" v-if="!row.cat_deleted" size="15px"
+              ><CircleCheckFilled
+            /></el-icon>
+            <el-icon color="red" v-else size="15px"
+              ><CircleCloseFilled
+            /></el-icon>
+          </template>
         </el-table-column>
         <el-table-column label="排序">
           <template #default="{ row }">
