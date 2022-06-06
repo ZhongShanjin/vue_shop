@@ -38,6 +38,8 @@ import {
   ElCheckboxGroup,
   ElCheckbox,
   ElUpload,
+  ElTimeline,
+  ElTimelineItem,
 } from 'element-plus'
 
 // 导入element - icon
@@ -81,6 +83,8 @@ const eleMent = {
   ElCheckboxGroup,
   ElCheckbox,
   ElUpload,
+  ElTimeline,
+  ElTimelineItem,
   ElementPlusIconsVue,
 }
 

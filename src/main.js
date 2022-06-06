@@ -64,6 +64,8 @@ app.use(eleMent.ElSteps)
 app.use(eleMent.ElCheckboxGroup)
 app.use(eleMent.ElCheckbox)
 app.use(eleMent.ElUpload)
+app.use(eleMent.ElTimeline)
+app.use(eleMent.ElTimelineItem)
 //挂载富文本编辑器
 app.use(Quill)
 app.config.globalProperties.$message = eleMent.ElMessage
