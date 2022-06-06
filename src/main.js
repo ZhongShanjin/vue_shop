@@ -10,6 +10,10 @@ import './app.css'
 import './assets/css/global.css'
 //axios模块
 import axios from 'axios'
+//导入富文本编辑器
+import Quill from 'vue3-quill-editor'
+import 'vue3-quill-editor/lib/style.css'
+
 const app = createApp(App)
 
 //路径
@@ -56,6 +60,12 @@ app.use(eleMent.ElCascader)
 app.use(eleMent.ElAlert)
 app.use(eleMent.ElTabs)
 app.use(eleMent.ElTabPane)
+app.use(eleMent.ElSteps)
+app.use(eleMent.ElCheckboxGroup)
+app.use(eleMent.ElCheckbox)
+app.use(eleMent.ElUpload)
+//挂载富文本编辑器
+app.use(Quill)
 app.config.globalProperties.$message = eleMent.ElMessage
 app.config.globalProperties.$confirm = eleMent.ElMessageBox
 //添加icon-vue组件

@@ -387,7 +387,6 @@ export default {
           params: { attr_sel: this.activeName },
         }
       )
-      console.log(res)
       if (res.meta.status !== 200) {
         return this.$message.error('获取参数信息失败!')
       }
@@ -409,7 +408,6 @@ export default {
       const { data: res } = await this.$http.delete(
         `categories/${this.cateId}/attributes/${id}`
       )
-      console.log(res)
       if (res.meta.status !== 200) {
         return this.$message.error('删除参数失败!')
       }

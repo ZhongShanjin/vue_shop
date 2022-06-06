@@ -329,7 +329,6 @@ export default {
     editUserInfo() {
       this.$refs.editFormRef.validate(async (valid) => {
         if (!valid) return
-        console.log(this.editForm.roleId)
         const { data: res } = await this.$http.put(
           'roles/' + this.editForm.roleId,
           { roleName: this.editForm.roleName, roleDesc: this.editForm.roleDesc }

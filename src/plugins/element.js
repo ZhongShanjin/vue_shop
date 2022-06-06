@@ -34,6 +34,10 @@ import {
   ElAlert,
   ElTabs,
   ElTabPane,
+  ElSteps,
+  ElCheckboxGroup,
+  ElCheckbox,
+  ElUpload,
 } from 'element-plus'
 
 // 导入element - icon
@@ -73,6 +77,10 @@ const eleMent = {
   ElAlert,
   ElTabs,
   ElTabPane,
+  ElSteps,
+  ElCheckboxGroup,
+  ElCheckbox,
+  ElUpload,
   ElementPlusIconsVue,
 }
 
