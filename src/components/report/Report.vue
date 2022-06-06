@@ -54,7 +54,7 @@ export default {
     }
   },
   created() {},
-  // 此时，页面上的元素，已经被渲染完毕了
+  // 此时，页面上的元素，已经被渲染完毕
   async mounted() {
     var myChart = echarts.init(document.getElementById('main'))
     const { data: res } = await this.$http.get('reports/type/1')
