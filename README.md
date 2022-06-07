@@ -1,0 +1,25 @@
+#### 项目整体文件说明
+
+- `src` 组件文件
+  - `assets` 图片，css 样式
+- `cpmponents` 组件
+  - `goods` 商品管理
+    - `Add.vue` 商品添加
+    - `Cate.vue` 商品分类
+    - `List.vue` 商品列表
+    - `Params.vue` 分类参数
+  - `order` 订单管理
+    - `Order.vue` 订单列表
+  - `power` 权限管理
+    - `Roles.vue` 角色列表
+    - `Rights.vue` 权限列表
+  - `report` 数据统计
+    - `Report.vue` 数据报表
+  - `report` 用户管理
+    - `Report.vue` 用户列表
+  - `home.vue` 首页
+  - `Login.vue` 登录页面
+  - `Welcome.vue` 欢迎页面
+- `dist` 打包后项目文件
+- `main.js` 主项目入口文件
+- `package.json` 项目配置文件
