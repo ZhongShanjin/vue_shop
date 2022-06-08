@@ -23,3 +23,4 @@
 - `dist` 打包后项目文件
 - `main.js` 主项目入口文件
 - `package.json` 项目配置文件
+- 后端API接口来自：https://gitee.com/lysimportant/vue_shop_server
